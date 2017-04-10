@@ -7,28 +7,21 @@
 body {
   background: url(img/development2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .cadastro {
-	width: 580px;
-	margin: 0 auto;
-	padding: 0px;
-	position: relative;
+  width: 580px;
+  margin: 0 auto;
+  padding: 0px;
+  position: relative;
   background-color: #fff;
   color: #000;
   border: 5px solid #632eb2; 
-}
-
-.cores {
-  color:#632eb2,
-        #77A8FF,
-        #2B77FF,
-        #3C547F,
-        #225FCC
 }
 
 .cadastro:after, .cadastro:before {
@@ -40,11 +33,7 @@ body {
 	clear: both;
 }
 
-body {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/*Título*/
 h1 {
   font-size: 24px;
   font-weight: bold;
@@ -65,10 +54,9 @@ h1:after {
   background: #111111;
   margin: 8px auto;
 }
-
+/*Formulário*/
 form {
   margin-left: 20%;
-  /*display: inline-block;*/
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 18px;
   line-height: 25px;
@@ -78,24 +66,6 @@ form {
 form>div {
   text-align: left;
   padding: 2px;
-}
-
-button {
-  background: none;
-  border: 3px solid #632eb2;
-  padding: 10px 30px;
-  color: #632eb2;
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font-weight: bold;
-  transition: all .5s ease;
-}
-
-button:hover {
-  color: #000;
-  border-color: #000;
 }
 
 form input, form select {
@@ -118,6 +88,25 @@ form input[type=checkbox] {
 
 form select[multiple] {
   height: auto;
+}
+
+/*Botões*/
+button {
+  background: none;
+  border: 3px solid #632eb2;
+  padding: 10px 30px;
+  color: #632eb2;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: bold;
+  transition: all .5s ease;
+}
+
+button:hover {
+  color: #000;
+  border-color: #000;
 }
 
 div:nth-child(7) {

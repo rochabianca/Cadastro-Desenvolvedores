@@ -3,10 +3,10 @@
 {
   var head = document.getElementsByTagName('head'),
   html = head[0].innerHTML,
-  adicionaCSS = '<link rel="stylesheet" type="text/css" href="index.css">',
-  novoHTML = html + adicionaCSS;
+  adiciona_css = '<link rel="stylesheet" type="text/css" href="index.css">',
+  novo_html = html + adiciona_css;
 
-  head[0].innerHTML = novoHTML;
+  head[0].innerHTML = novo_html;
 })();
 
 //Valida os campos nome, empresa e time
@@ -23,17 +23,20 @@
     var idade = document.getElementsByName('idade');
     
     //Verifica se os campos nome, empresa e time estão preenchidos
-    if(nome[0].value == "" && empresa[0].value == "" || empresa[0].value == "" && time[0].value == ""  || time[0].value == "" && nome[0].value == "") {
-      console.log("Por favor, preencha os campos obrigatórios");
+    if(nome[0].value == '' && empresa[0].value == '' || empresa[0].value == '' && time[0].value == ''  || time[0].value == '' && nome[0].value == '') {
+      console.log('Por favor, preencha os campos obrigatórios');
     }
-    else if(nome[0].value == "") {
-       console.log("Por favor, preencha o seu nome");
+
+    else if(nome[0].value == '') {
+       console.log('Por favor, preencha o seu nome');
     }
-    else if(empresa[0].value == "") {
-      console.log("Por favor, preencha o nome da empresa");
+
+    else if(empresa[0].value == '') {
+      console.log('Por favor, preencha o nome da empresa');
     }
-    else if(time[0].value == "") {
-      console.log("Por favor, preencha o seu time de desenvolvimento");
+
+    else if(time[0].value == '') {
+      console.log('Por favor, preencha o seu time de desenvolvimento');
     }
 
     //Verifica se a idade é numérica e maior que 0
@@ -41,7 +44,6 @@
     if(idade === 0 || idade < 0  || isNaN(idade) == true) {
       console.log('idade inválida');
     }
-
   });
 })();
 
