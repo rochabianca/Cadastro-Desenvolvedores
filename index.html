@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro de Desenvolvedores</title>
+        <style>
+            .debug {
+                font-family: monospace;
+                border: 1px solid black;
+                padding: 10px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Cadastros de desenvolvedores</h1>
+        <div class="cadastro">
+            <ol class="desenvolvedores"></ol>
+            <form>
+                <div>
+                    <label>Empresa
+                        <input type="text" name="empresa">
+                    </label>
+                </div>
+                <div>
+                    <label>Nome
+                        <input type="text" name="nome">
+                    </label>
+                </div>
+                <div>
+                    <label>Idade
+                        <input type="text" name="idade">
+                    </label>
+                </div>
+                <div>
+                    <label>Time
+                        <select name="time">
+                            <option value="">---</option>
+                            <option value="front">Frontend</option>
+                            <option value="back">Backend</option>
+                            <option value="infra">Infraestrutura</option>
+                            <option value="telecon">Telefonia</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label>Tecnologias
+                        <select multiple name="tec">
+                            <option value="js">Javascript</option>
+                            <option value="php">PHP</option>
+                            <option value="java">Java</option>
+                            <option value="ruby">Ruby</option>
+                            <option value="python">Python</option>
+                            <option value="perl">Perl</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label>Estágio?
+                        <input type="checkbox" name="smoker">
+                    </label>
+                </div>
+                <div>
+                    <button class="add">adicionar</button>
+                </div>
+                <div>
+                    <button type="submit">enviar</button>
+                </div>
+            </form>
+        </div>
+        <pre class="debug"></pre>
+        <script type="text/javascript" src="./index.js"></script>
+    </body>
+</html>
