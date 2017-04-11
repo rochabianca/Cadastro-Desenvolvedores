@@ -21,6 +21,8 @@
     var empresa = document.getElementsByName('empresa');
     var time = document.getElementsByName('time');
     var idade = document.getElementsByName('idade');
+    var tecnologias = document.getElementsByName('tec');
+    var estagio = document.getElementsByName('smoker');
     
     //Verifica se os campos nome, empresa e time estão preenchidos
     if(nome[0].value == '' && empresa[0].value == '' || empresa[0].value == '' && time[0].value == ''  || time[0].value == '' && nome[0].value == '') {
@@ -50,36 +52,39 @@
       console.log(tecnologias[i].value);
     }
     
-
+    console.log(estagio.value);
     //Transforma em JSON
-    var json = JSON.stringify({empresa: empresa[0].value, nome: nome[0].value, idade: idade, time: time[0].value }, null, '\t');
+    var json = JSON.stringify({empresa: empresa[0].value, nome: nome[0].value, idade: idade, time: time[0].value, tecnologias: tecnologias[0].value, estagio: estagio[0].value }, null, '\t');
     console.log(json);
   });
 })();
 
-/// Load JSON
-/// Alert: Não é cross browser
-/// Example: loadJSON("assets/json/config.json", function(a){console.log('success',a)}, function(b){console.log('error', b)});
-function loadJSON(url, success, error) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            try {
-                var JSONObject = JSON.parse(xmlhttp.responseText);
-                success(JSONObject);
-            } catch (e) {
-                error(e);
-            }
-        } else {
-            var e = { "readyState": xmlhttp.readyState, "status": xmlhttp.status };
-            if ([200, 0].indexOf(xmlhttp.status) == -1 && xmlhttp.readyState == 4) {
-                error(e);
-            }
-        }
-    }
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-}
+var getJSON = function(url) {
+  return new Promise(function(resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status == 200) {
+        resolve(xhr.response);
+      } else {
+        reject(status);
+      }
+    };
+    xhr.send();
+  });
+};
 
-loadJSON('http://C:/Users/bianc/Documents/Cadastro-Desenvolvedores/dados.json', function() {console.log('sucess');}, function() {console.log('error');});
+var data_json;
+getJSON('https://raw.githubusercontent.com/rochabianca/Cadastro-Desenvolvedores/master/dados.json').then(function(data) {
+    console.log('Your Json result is:  ' + data); //you can comment this, i used it to debug
+    data.innerText = data; //display the result in an HTML element
+    data_json = data;
+}, function(status) { //error detection....
+  alert('Something went wrong.');
+});
+
+
+
 

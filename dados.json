@@ -16,5 +16,13 @@
     "nome": "Vanessa Faria",
     "idade": 23,
     "time": "back"
-  }
+  },
+  {
+    "empresa": "Laravel",
+    "nome": "Vitor Cranio",
+    "idade": 19,
+    "time": "front",
+    "tecnologias": "js",
+    "estagio": "on"
+}
 ]
