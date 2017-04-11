@@ -5,7 +5,7 @@
 }
 
 body {
-  background: url(img/development2.jpg) no-repeat center center fixed;
+  background: url(img/development.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,7 +21,7 @@ body {
   position: relative;
   background-color: #fff;
   color: #000;
-  border: 5px solid #632eb2; 
+  border: 4px solid #632eb2; 
 }
 
 .cadastro:after, .cadastro:before {
@@ -71,7 +71,7 @@ form>div {
 form input, form select {
   display: block;
   width: 80%;
-  border: 4px solid #632eb2;
+  border: 3px solid #632eb2;
   background: none;
   padding: 7px 10px;
   margin-top: 3px;
