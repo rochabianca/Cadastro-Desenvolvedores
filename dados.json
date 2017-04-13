@@ -1,21 +1,28 @@
 [
   {
-    "empresa": "Desenvolve Ceará",
-    "nome": "Valdir Sampaio",
-    "idade": 53,
-    "time": "back"
+	"empresa": "Desenvolve Ceará",
+	"nome": "Valdir Sampaio",
+	"idade": 53,
+	"time": "back",
+	"tecnologias": "java",
+	"estagio": false
+  },
+
+  {
+	"empresa": "InvTec",
+	"nome": "Wardicranio Josér Valdo",
+	"idade": 20,
+	"time": "front",
+	"tecnologias": "js",
+	"estagio": false
   },
   {
-    "empresa": "Investe Tecnologia",
-    "nome": "Wardicranio José Valdo",
-    "idade": 20,
-    "time": "front"
-  },
-  {
-    "empresa": "Café e Tecnologia",
-    "nome": "Vanessa Faria",
-    "idade": 23,
-    "time": "back"
+	"empresa": "Café e Tecnologia",
+	"nome": "Vanessa Faria",
+	"idade": 23,
+	"time": "back",
+	"tecnologias": "ruby",
+	"estagio": true
   },
   {
     "empresa": "Laravel",
@@ -23,6 +30,6 @@
     "idade": 19,
     "time": "front",
     "tecnologias": "js",
-    "estagio": "on"
-}
+    "estagio": true
+  }
 ]
